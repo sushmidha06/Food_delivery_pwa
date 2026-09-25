@@ -7,6 +7,8 @@ import { Footer } from './Footer';
 import { CartConflictModal } from '../restaurant/CartConflictModal';
 import { LocationModal } from '../home/LocationModal';
 
+import { PageLoader } from '../common/PageLoader';
+
 export const Layout: React.FC = () => {
   const location = useLocation();
   const isAuthPage = location.pathname === '/login' || location.pathname === '/register';
@@ -17,7 +19,9 @@ export const Layout: React.FC = () => {
       <Navbar />
 
       <main className={`flex-1 ${isAuthPage ? 'pb-6' : 'pb-24 md:pb-12'}`}>
-        <Outlet />
+        <React.Suspense fallback={<PageLoader />}>
+          <Outlet />
+        </React.Suspense>
       </main>
 
       {!isAuthPage && !isNative && <Footer />}
