@@ -1,0 +1,7 @@
+android
+*.apk
+.gradle-builds
+node_modules
+dist
+.tempmediaStorage
+.user_uploaded

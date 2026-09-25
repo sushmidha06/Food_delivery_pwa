@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Zestora</string>
+    <string name="title_activity_main">Zestora</string>
+    <string name="package_name">com.zestora.app</string>
+    <string name="custom_url_scheme">com.zestora.app</string>
+</resources>
